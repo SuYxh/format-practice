@@ -8,6 +8,8 @@ specifiers:
   eslint-config-prettier: ^8.6.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.9.0
+  husky: ^8.0.3
+  postcss: ^8.3.5
   postcss-html: ^1.5.0
   postcss-less: ^6.0.0
   prettier: ^2.8.4
@@ -36,8 +38,10 @@ devDependencies:
   eslint-config-prettier: 8.10.0_eslint@8.35.0
   eslint-plugin-prettier: 4.2.1_snqu2nyscaede3i4all7vy34uu
   eslint-plugin-vue: 9.28.0_eslint@8.35.0
+  husky: 8.0.3
+  postcss: 8.4.45
   postcss-html: 1.7.0
-  postcss-less: 6.0.0
+  postcss-less: 6.0.0_postcss@8.4.45
   prettier: 2.8.8
   stylelint: 14.16.1
   stylelint-config-prettier: 9.0.5_stylelint@14.16.1
@@ -1534,6 +1538,12 @@ packages:
       entities: 4.5.0
     dev: true
 
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   /ignore/5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
@@ -1971,11 +1981,13 @@ packages:
       postcss-safe-parser: 6.0.0_postcss@8.4.45
     dev: true
 
-  /postcss-less/6.0.0:
+  /postcss-less/6.0.0_postcss@8.4.45:
     resolution: {integrity: sha512-FPX16mQLyEjLzEuuJtxA8X3ejDLNGGEG503d2YGZR5Ask1SpDN8KmZUMpzCvyalWRywAn1n1VOA5dcqfCLo5rg==}
     engines: {node: '>=12'}
     peerDependencies:
       postcss: ^8.3.5
+    dependencies:
+      postcss: 8.4.45
     dev: true
 
   /postcss-media-query-parser/0.2.3:
