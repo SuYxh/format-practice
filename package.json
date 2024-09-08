@@ -13,6 +13,7 @@
     "cz": "git add . && cz"
   },
   "dependencies": {
+    "cz-customizable": "^7.2.1",
     "three": "^0.167.1",
     "vue": "^3.4.37"
   },
@@ -47,7 +48,10 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
     }
   },
   "lint-staged": {
