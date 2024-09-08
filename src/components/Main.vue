@@ -7,28 +7,29 @@
 </template>
 
 <script>
-import { shallowRef,defineAsyncComponent } from 'vue';
+import { shallowRef, defineAsyncComponent } from 'vue'
 
 export default {
   name: 'App',
   setup() {
-    const asyncComponent = shallowRef(null);
+    const asyncComponent = shallowRef(null)
 
     const loadComponent = () => {
-      console.log(1);
+      console.log(1)
 
-      asyncComponent.value = defineAsyncComponent(() => import('./AsyncComponent.vue'));
+      asyncComponent.value = defineAsyncComponent(() =>
+        import('./AsyncComponent.vue')
+      )
 
-      console.log(2);
-
-    };
+      console.log(2)
+    }
 
     return {
       asyncComponent,
       loadComponent
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

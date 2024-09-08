@@ -3,7 +3,6 @@
 </script>
 
 <template>
-  
   <h1>hello</h1>
   <!-- <button>123</button> -->
   <!-- <Button>123</Button> -->

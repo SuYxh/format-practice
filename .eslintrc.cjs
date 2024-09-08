@@ -15,7 +15,12 @@ module.exports = {
     // 应用Vue.js 3.x版本的基本规则集，用于Vue文件的检查，需要安装Vue的ESLint插件（eslint-plugin-vue）
     'plugin:vue/vue3-essential',
     // 适用于 TypeScript 的推荐规则集，提供了与 TypeScript 相关的最佳实践，通过@typescript-eslint/eslint-plugin提供。
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    // 接入 prettier 的规则，这两个配置是为了整合 Prettier 和 ESLint。
+    // 'prettier' 是一个基础配置，它确保 ESLint 和 Prettier 不会发生冲突
+    'prettier',
+    // 是一个推荐配置，它包括了 'prettier' 并且设置了 'prettier/prettier' 规则为 'error'，这意味着任何不符合 Prettier 格式的代码都会被标记为错误
+    'plugin:prettier/recommended'
   ],
   // 全局变量
   globals: {
@@ -35,20 +40,25 @@ module.exports = {
   },
   plugins: [
     // 添加 Vue.js 相关的规则，使用这个插件需要安装eslint-plugin-vue
-    'vue', 
+    'vue',
     // 添加 TypeScript 相关的规则，使用这个插件需要安装@typescript-eslint/eslint-plugin和@typescript-eslint/parser
     '@typescript-eslint'
   ],
   rules: {
+    // 这条规则确保所有不符合 Prettier 格式的代码都会被 ESLint 报告为错误。这样可以在执行 --fix 的时候进行修复。
+    'prettier/prettier': ['error', { semi: false }],
     // 禁用 @ts-ignore、@ts-nocheck、@ts-check 等 TypeScript 特定的注释
     '@typescript-eslint/ban-ts-comment': 'off',
     // 关闭对 Vue 组件名称必须为多单词的限制
     'vue/multi-word-component-names': 'off',
     // 配置未使用变量的检查规则，允许变量和参数名以 _ 开头，忽略剩余的兄弟属性
-    '@typescript-eslint/no-unused-vars': ['error', { 
-      'argsIgnorePattern': '^_',
-      'varsIgnorePattern': '^_',
-      'ignoreRestSiblings': true 
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        ignoreRestSiblings: true
+      }
+    ]
   }
-};
+}
