@@ -3,21 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,vue}": [
-      "pnpm lint:script"
-    ],
-    "*.{css,less}": [
-      "pnpm lint:style"
-    ]
-  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --ignore-pattern 'node_modules/*' --fix --quiet .",
     "lint:style": "stylelint --ignore-pattern 'node_modules/*' --fix \"src/**/*.{css,less}\"",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "cz": "git add . && cz"
   },
   "dependencies": {
     "three": "^0.167.1",
@@ -29,6 +22,8 @@
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "@vitejs/plugin-vue": "^5.1.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -49,5 +44,18 @@
     "typescript": "5.1.6",
     "vite": "^5.4.1",
     "vue-tsc": "^2.0.29"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx,vue}": [
+      "pnpm lint:script"
+    ],
+    "*.{css,less}": [
+      "pnpm lint:style"
+    ]
   }
 }
