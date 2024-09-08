@@ -1,13 +1,12 @@
 <script setup lang="ts">
-// @ts-ignore
-import { Button } from 'view-ui';
+// import { Button } from 'view-ui';
 </script>
 
 <template>
   
   <h1>hello</h1>
-  <button>123</button>
-  <Button>123</Button>
+  <!-- <button>123</button> -->
+  <!-- <Button>123</Button> -->
 </template>
 
 <style scoped>

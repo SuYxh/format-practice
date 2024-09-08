@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { ref, shallowRef,defineAsyncComponent } from 'vue';
+import { shallowRef,defineAsyncComponent } from 'vue';
 
 export default {
   name: 'App',
