@@ -3,12 +3,21 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx,vue}": [
+      "pnpm lint:script"
+    ],
+    "*.{css,less}": [
+      "pnpm lint:style"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --ignore-pattern 'node_modules/*' --fix --quiet .",
-    "lint:style": "stylelint --ignore-pattern 'node_modules/*' --fix \"src/**/*.{css,less}\""
+    "lint:style": "stylelint --ignore-pattern 'node_modules/*' --fix \"src/**/*.{css,less}\"",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "three": "^0.167.1",
@@ -25,6 +34,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.3.5",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
