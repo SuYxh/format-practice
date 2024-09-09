@@ -42,7 +42,9 @@ module.exports = {
     // 添加 Vue.js 相关的规则，使用这个插件需要安装eslint-plugin-vue
     'vue',
     // 添加 TypeScript 相关的规则，使用这个插件需要安装@typescript-eslint/eslint-plugin和@typescript-eslint/parser
-    '@typescript-eslint'
+    '@typescript-eslint',
+    // 未使用导入检查
+    'unused-imports'
   ],
   rules: {
     // 这条规则确保所有不符合 Prettier 格式的代码都会被 ESLint 报告为错误。这样可以在执行 --fix 的时候进行修复。
@@ -59,6 +61,8 @@ module.exports = {
         varsIgnorePattern: '^_',
         ignoreRestSiblings: true
       }
-    ]
+    ],
+    // 未使用导入检查
+    'unused-imports/no-unused-imports': 'error'
   }
 }

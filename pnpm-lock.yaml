@@ -12,6 +12,7 @@ specifiers:
   eslint: 8.35.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-prettier: ^4.2.1
+  eslint-plugin-unused-imports: ^4.1.3
   eslint-plugin-vue: ^9.9.0
   husky: ^8.0.3
   lint-staged: ^15.2.10
@@ -49,6 +50,7 @@ devDependencies:
   eslint: 8.35.0
   eslint-config-prettier: 8.10.0_eslint@8.35.0
   eslint-plugin-prettier: 4.2.1_snqu2nyscaede3i4all7vy34uu
+  eslint-plugin-unused-imports: 4.1.3_p6civ5jypnidjt2o62hcojnj4e
   eslint-plugin-vue: 9.28.0_eslint@8.35.0
   husky: 8.0.3
   lint-staged: 15.2.10
@@ -2345,6 +2347,19 @@ packages:
       eslint-config-prettier: 8.10.0_eslint@8.35.0
       prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
+    dev: true
+
+  /eslint-plugin-unused-imports/4.1.3_p6civ5jypnidjt2o62hcojnj4e:
+    resolution: {integrity: sha512-lqrNZIZjFMUr7P06eoKtQLwyVRibvG7N+LtfKtObYGizAAGrcqLkc3tDx+iAik2z7q0j/XI3ihjupIqxhFabFA==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^8.0.0-0 || ^7.0.0 || ^6.0.0 || ^5.0.0
+      eslint: ^9.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.62.0_l6jst5e4f6aola2igcvfvohzf4
+      eslint: 8.35.0
     dev: true
 
   /eslint-plugin-vue/9.28.0_eslint@8.35.0:
